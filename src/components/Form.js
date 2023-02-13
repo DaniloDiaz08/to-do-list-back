@@ -24,7 +24,7 @@ const Form = ({addTodo}) => {
             <div className='ui grid center aligned'>
                 <div className='row'>
                     <div className='column five wide'>
-                        <input value={inputValue} onChange={handleInputChange} type="text" placeholder="Añda una tarea..."></input>
+                        <input value={inputValue} onChange={handleInputChange} type="text" placeholder="Añada una tarea..."></input>
                     </div>
 
                     <div className='column one wide'>
