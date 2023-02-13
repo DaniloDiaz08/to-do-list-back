@@ -15,6 +15,7 @@ const Todo = ({title, completed, removeTodoItemProp}) => {
         const key = e.keyCode;
     
         if(key === 13){
+            editTodoItemProp({ title: tempValue });
             setValue(tempValue);
             setIsEditing(false);
         }
@@ -29,7 +30,11 @@ const Todo = ({title, completed, removeTodoItemProp}) => {
     }
 
     const handelButtonClick = () => {
-        setCompletedState((OldCompleted) => !OldCompleted);
+        setCompletedState((oldCompleted) => {
+            const newState = !oldCompleted;
+            editTodoItemProp({completed: newState});
+            return newState;
+        })
     }
 
     return (
