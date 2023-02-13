@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const Form = ({addTodo}) => {
 
@@ -7,7 +7,6 @@ const Form = ({addTodo}) => {
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
-
     };
 
     const handleFormSubmit = (e) => {
@@ -15,7 +14,7 @@ const Form = ({addTodo}) => {
 
         if(inputValue.trim() === "") return;
 
-        addTodo({ title:inputValue, completed: false });
+        addTodo({ title: inputValue, completed: false });
         setInputValue("");
     }
 
@@ -24,7 +23,12 @@ const Form = ({addTodo}) => {
             <div className='ui grid center aligned'>
                 <div className='row'>
                     <div className='column five wide'>
-                        <input value={inputValue} onChange={handleInputChange} type="text" placeholder="Añada una tarea..."></input>
+                        <input
+                            value={inputValue}
+                            onChange={handleInputChange}
+                            type="text"
+                            placeholder="Añada una tarea...">
+                        </input>
                     </div>
 
                     <div className='column one wide'>
