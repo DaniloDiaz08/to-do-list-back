@@ -9,4 +9,8 @@ router.get("/", (req, res) => {
     //console.log("You are in the index page");
 });
 
+router.post("/new", (req, res) => {
+    console.log(req.body);
+});
+
 module.exports = router;
